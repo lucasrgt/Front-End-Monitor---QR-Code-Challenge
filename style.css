@@ -1,0 +1,139 @@
+/* Reset Components */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit";
+}
+
+/* Define CSS variables for design system*/
+
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 46%, 89%);
+  --grayish-blue: hsl(219, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+  --blue: hsl(216, 95%, 58%);
+}
+
+/* CSS Code */
+
+body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: var(--light-gray);
+
+  width: 100%;
+  height: 100vh;
+}
+
+.container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto 0;
+
+  width: 25%;
+  height: auto;
+
+  padding: 1em;
+
+  background-color: var(--white);
+
+  border-radius: 1.5rem;
+
+  -webkit-box-shadow: 0px 0px 28px -9px rgba(123, 135, 157, 0.56);
+  -moz-box-shadow: 0px 0px 28px -9px rgba(123, 135, 157, 0.56);
+  box-shadow: 0px 0px 28px -9px rgba(123, 135, 157, 0.56);
+}
+
+.container__qrcode {
+  border: var(--border-enabled);
+
+  flex-basis: 75%;
+}
+
+.container__qrcode img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 0.75rem;
+}
+
+.container__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1.5rem;
+
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  color: var(--dark-blue);
+
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+
+  color: var(--grayish-blue);
+}
+
+.attribution {
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.attribution p {
+  color: var(--light-gray);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+@media screen and (max-width: 376px) {
+  .container__card {
+    width: 80%;
+  }
+
+  .container__text {
+    padding: 0;
+  }
+
+  .container__text h1 {
+    padding: 1rem;
+    margin-bottom: 0;
+
+    font-size: 1.125rem;
+  }
+
+  .container__text p {
+    padding-inline: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .attribution {
+    padding-inline: 1rem;
+  }
+}
